@@ -1,5 +1,7 @@
 # bachelorproject
 Segment ruts image part from a figure
 Resutls:
-![My image](bbzzyy.github.com/bachelorproject/33.png)
+Before:
+![ScreenShot](3.JPG)
+After:
 ![ScreenShot](33.png)
