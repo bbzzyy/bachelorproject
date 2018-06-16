@@ -5,15 +5,15 @@ I=imread('C:\Users\zy\Desktop\3.jpg');
 I=imresize(rgb2gray(I),1/12);
 
 gs=fspecial('gaussian',7,3);
-I1=imfilter(I,gs,'symmetric');%高斯滤波平滑
-image=lightenhance(I1,31,31,1.5);%图像质量增强
-I1=floor(image./32);%灰度降级
+I1=imfilter(I,gs,'symmetric');%楂樻柉婊ゆ尝骞虫粦
+image=lightenhance(I1,31,31,1.5);%鍥惧儚璐ㄩ噺澧炲己
+I1=floor(image./32);%鐏板害闄嶇骇
 % figure,imshow(I1,[]);
-cyclefeature=extfz(I1,61);%提取车辙周期特征
+cyclefeature=extfz(I1,61);%鎻愬彇杞﹁緳鍛ㄦ湡鐗瑰緛
 
-I2=lightenhance(I,31,31,1.5);%图像质量增强
+I2=lightenhance(I,31,31,1.5);%鍥惧儚璐ㄩ噺澧炲己
 % figure,imshow(I2,[]);
-sideangle=extsideangle(I);%提取车辙纹理角度
+sideangle=extsideangle(I);%鎻愬彇杞﹁緳绾圭悊瑙掑害
 [gabormean,gabordeviation]=extractgabor(I2,25,23,sideangle);
 % figure,imshow(gabormean,[]);
 % figure,imshow(gabordeviation,[]);
@@ -26,7 +26,7 @@ rutimage = imagesegment(center,U,locationmat);
 % figure,imshow(rutimage);
 
 %%
-%后处理形态学运算
+%鍚庡鐞嗗舰鎬佸杩愮畻
 rutimage=bwareaopen(rutimage,10);
 se1=strel('line',10,0);
 rutimage=imerode(rutimage,se1);
@@ -36,7 +36,7 @@ rutimage=imclose(rutimage,se2);
 
 figure,imshow(rutimage);
 %%
-%画圈
+%鐢诲湀
 g=edge(rutimage,'canny');
 se=strel('square',2);
 g=imdilate(g,se);
