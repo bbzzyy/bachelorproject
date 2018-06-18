@@ -1,7 +1,7 @@
 # bachelorproject
 Segment ruts image part from a figure
 
-# Resutls:
+# Results:
 Before:\
 ![ScreenShot](3.png)\
 After:\
